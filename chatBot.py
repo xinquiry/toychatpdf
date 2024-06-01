@@ -276,12 +276,10 @@ def txtToText(path):
 
 
 def pdfToText(path):
-    fname = path
     model_lst = load_all_models()
-    full_text, _ = convert_single_pdf(
-        fname, model_lst, max_pages=None, parallel_factor=1
+    full_text, _, _ = convert_single_pdf(
+        path, model_lst, max_pages=10, batch_multiplier=2, langs=["Chinese", "English"]
     )
-    convert_single_pdf(fname, model_lst)
     return full_text
 
 
@@ -341,4 +339,5 @@ demo = gr.ChatInterface(
     predict,
     additional_inputs=[gr.File()],
 )
-demo.launch()
+if __name__ == "__main__":
+    demo.launch()

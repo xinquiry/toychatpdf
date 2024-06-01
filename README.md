@@ -2,6 +2,8 @@
 
 This project use the open-source project marker and give a gui to it.
 
+To use cpu, you should change the `TORCH_DEVICE: Option[str] = "cuda"` to `TORCH_DEVICE: Option[str] = "default"` in `marker/settings.py`.
+
 # Installation
 
 This has been tested on Mac and Linux (Ubuntu and Debian).  You'll need python 3.9+ and [poetry](https://python-poetry.org/docs/#installing-with-the-official-installer).
