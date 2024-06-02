@@ -1,4 +1,4 @@
-# Marker
+# ToyChatPDF
 
 This project use the open-source project marker and give a gui to it.
 
